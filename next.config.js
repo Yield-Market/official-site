@@ -27,8 +27,8 @@
 /** @type {import('next').NextConfig} */
 const isGithubPages = process.env.GITHUB_PAGES === 'true'
 // 仓库名为 official-site，basePath 和 assetPrefix 固定为 /official-site（无需动态判断，更稳定）
-const basePath = '/official-site'
-const assetPrefix = '/official-site'
+const basePath = '/'
+const assetPrefix = '/'
 
 module.exports = {
   reactStrictMode: true,

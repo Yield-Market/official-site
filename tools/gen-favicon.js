@@ -1,5 +1,5 @@
 /*
- * Simple script to convert public/official-site/icon.png to favicon.ico and copy to src/app
+ * Simple script to convert public/icon.png to favicon.ico and copy to src/app
  * Uses the `png-to-ico` package (install as a devDependency).
  */
 const fs = require('fs');
@@ -17,7 +17,7 @@ async function main() {
   const appIcoOut = path.join(projectRoot, 'src', 'app', 'favicon.ico');
 
   if (!fs.existsSync(pngPath)) {
-    console.error('public/official-site/icon.png not found. Make sure the file exists.');
+    console.error('public/icon.png not found. Make sure the file exists.');
     process.exit(1);
   }
 

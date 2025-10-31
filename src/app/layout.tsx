@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   description: "A large, heavily bolded quote for emphasis and breaking up content.",
   icons: {
     // use the icon from public/ so it can be reused across the site
-    icon: '/official-site/icon.png',
-    shortcut: '/official-site/icon.png',
-    apple: '/official-site/icon.png',
+    icon: '/icon.png',
+    shortcut: '/icon.png',
+    apple: '/icon.png',
   },
 };
 
@@ -35,9 +35,9 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* explicit links to ensure the browser uses our icon */}
-        <link rel="icon" href="/official-site/icon.png" />
-        <link rel="shortcut icon" href="/official-site/icon.png" />
-        <link rel="apple-touch-icon" href="/official-site/icon.png" />
+        <link rel="icon" href="/icon.png" />
+        <link rel="shortcut icon" href="/icon.png" />
+        <link rel="apple-touch-icon" href="/icon.png" />
         <meta name="theme-color" content="#000" />
       </head>
       <body

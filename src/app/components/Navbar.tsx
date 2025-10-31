@@ -17,7 +17,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center p-4">
         <div className="flex items-center space-x-2">
           <Link href="/" className="inline-flex items-center space-x-2">
-            <Image src="/official-site/icon.png" alt="Yield Market" width={24} height={24} priority />
+            <Image src="/icon.png" alt="Yield Market" width={24} height={24} priority />
             <span className="font-bold text-xl">Yield Market</span>
           </Link>
         </div>
