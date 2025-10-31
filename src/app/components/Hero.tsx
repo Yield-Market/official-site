@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="container mx-auto relative">
         <div className="flex justify-center mb-6">
           <Image
-            src="/icon.png"
+            src="/official-site/icon.png"
             alt="Yield Market"
             width={288}
             height={288}

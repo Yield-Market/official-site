@@ -5,7 +5,7 @@
 //  *   GITHUB_PAGES=true npm run build && GITHUB_PAGES=true npm run export
 //  *
 //  * This will set `basePath` and `assetPrefix` so assets referenced with leading
-//  * "/" (eg. "/icon.png") resolve correctly when the site is served from
+//  * "/" (eg. "/official-site/icon.png") resolve correctly when the site is served from
 //  * https://<user>.github.io/official-site/
 //  */
 

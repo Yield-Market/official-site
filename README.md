@@ -22,7 +22,7 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 If you deploy this site to GitHub Pages under a repository subpath (for example
 https://<user>.github.io/official-site/), static assets referenced with an
-absolute path like `/icon.png` will break unless Next.js is configured with a
+absolute path like `/official-site/icon.png` will break unless Next.js is configured with a
 `basePath` and `assetPrefix` matching the repo path. This repository provides a
 `next.config.js` that reads the environment variable `GITHUB_PAGES=true` to set
 those values automatically.
@@ -37,7 +37,7 @@ GITHUB_PAGES=true npm run export
 ```
 
 Alternative quick fixes:
-- Change references from `/icon.png` to `./icon.png` or `icon.png` (relative
+- Change references from `/official-site/icon.png` to `./official-site/icon.png` or `official-site/icon.png` (relative
 	paths) in your components so they work both on root domains and repo subpaths.
 - Or explicitly set `basePath`/`assetPrefix` to your repo name in
 	`next.config.js`.
