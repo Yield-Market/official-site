@@ -1,19 +1,15 @@
 name: Deploy Next.js to GitHub Pages
 
-# 触发条件：推送到 main 分支时自动部署
 on:
   push:
     branches: ["main"]
-  # 允许手动触发部署
   workflow_dispatch:
 
-# 权限配置（部署 GitHub Pages 必需）
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# 并发控制：避免重复部署
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -25,30 +21,28 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      # 1. 拉取仓库代码
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 2. 安装 Node.js（匹配本地开发环境版本，建议 18+）
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: "npm"  # 缓存依赖，加速安装
+          cache: "npm"
 
-      # 3. 安装项目依赖（对应本地的 npm install）
       - name: Install dependencies
         run: npm install
 
-      # 4. 构建静态文件（Next.js 生成可部署的 HTML/CSS/JS）
       - name: Build project
-        run: npm run build  # 依赖 next.config.js 中的 output: 'export' 配置
+        run: npm run build  # 生成 out 目录
 
-      # 5. 部署到 GitHub Pages
+      # 新增：上传 out 目录为 artifact（关键步骤）
+      - name: Upload build artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "./out"  # 指向 Next.js 构建输出的目录
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          # 部署 Next.js 构建输出的 out 目录（默认路径，与 next.config.js 对应）
-          artifact_name: github-pages
-          path: "./out"
+        # 不需要再指定 path，部署工具会自动读取上面上传的 artifact
