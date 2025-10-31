@@ -20,6 +20,28 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+If you deploy this site to GitHub Pages under a repository subpath (for example
+https://<user>.github.io/official-site/), static assets referenced with an
+absolute path like `/icon.png` will break unless Next.js is configured with a
+`basePath` and `assetPrefix` matching the repo path. This repository provides a
+`next.config.js` that reads the environment variable `GITHUB_PAGES=true` to set
+those values automatically.
+
+To build/export for GitHub Pages:
+
+```bash
+# set GITHUB_PAGES so next.config.js enables the subpath
+GITHUB_PAGES=true npm run build
+GITHUB_PAGES=true npm run export
+# the exported static site will be in the `out/` folder — deploy that to gh-pages
+```
+
+Alternative quick fixes:
+- Change references from `/icon.png` to `./icon.png` or `icon.png` (relative
+	paths) in your components so they work both on root domains and repo subpaths.
+- Or explicitly set `basePath`/`assetPrefix` to your repo name in
+	`next.config.js`.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

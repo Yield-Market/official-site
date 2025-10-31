@@ -5,23 +5,28 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
+    "gen-favicon": "node tools/gen-favicon.js",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "next": "16.0.0",
     "react": "19.2.0",
-    "react-dom": "19.2.0",
-    "next": "16.0.0"
+    "react-dom": "19.2.0"
   },
   "devDependencies": {
-    "babel-plugin-react-compiler": "1.0.0",
-    "typescript": "^5",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
+    "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
-    "eslint-config-next": "16.0.0"
+    "eslint-config-next": "16.0.0",
+    "png-to-ico": "^3.0.1",
+    "sharp": "^0.34.4",
+    "tailwindcss": "^4",
+    "to-ico": "^1.1.5",
+    "typescript": "^5"
   }
 }
