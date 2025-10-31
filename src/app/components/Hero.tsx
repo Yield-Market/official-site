@@ -29,7 +29,7 @@ const Hero = () => {
         <p className="text-gray-600 mb-2">{subtitle}</p>
         <h1 className="text-5xl md:text-7xl font-bold text-black mb-8">Yield Market</h1>
         <div className="flex justify-center space-x-4">
-          <a href="https://yieldmarket.org" className="bg-black text-white font-semibold py-3 px-8 rounded-lg hover:bg-gray-800 transition-colors">
+          <a href="https://app.yieldmarket.org" className="bg-black text-white font-semibold py-3 px-8 rounded-lg hover:bg-gray-800 transition-colors">
             {ctaPrimary}
           </a>
           <a href="https://github.com/Yield-Market" target="_blank" rel="noopener noreferrer" className="bg-white text-black font-semibold py-3 px-8 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors">

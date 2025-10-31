@@ -171,5 +171,5 @@ ETHShanghai 1st Prize
 
 ## 十二、联系方式
 - 官方账号：@YM_admin、@YieldMarketDefi
-- 官网：www.yieldmarket.org
+- 官网：app.yieldmarket.org
 - GitHub：https://github.com/Yield-Market
