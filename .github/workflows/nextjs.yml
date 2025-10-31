@@ -33,7 +33,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: "20"
           cache: "npm"  # 缓存依赖，加速安装
 
       # 3. 安装项目依赖（对应本地的 npm install）
